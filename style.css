@@ -1,0 +1,350 @@
+.logo {
+  font-style: italic;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.waverow {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(130deg, #bce5ff, #0d6efd),
+    url("image/jres5rig.png");
+  background-blend-mode: screen;
+}
+
+strong a {
+    text-decoration: none;
+    color: black;
+}
+
+#img {
+  position: relative;
+  padding-top: 100px;
+  max-width: 100%;
+  z-index: 1000;
+}
+
+.img-container {
+  width: 100%;
+  z-index: 1000;
+}
+
+#img:hover {
+  transform: scale(1.07);
+}
+
+#wave {
+  position: relative;
+  z-index: -1;
+  bottom: 129px;
+}
+
+.wave-1 {
+  filter: drop-shadow(0px -4px 15px rgba(0, 0, 0, 0.5));
+}
+
+.services {
+  background-color: #fff;
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+  bottom: 150px;
+}
+
+.judul-services {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  align-items: center;
+}
+
+.card-services {
+  width: 450px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-direction: column; /* Agar elemen diatur secara vertikal */
+  align-items: center; /* Pusatkan secara horizontal */
+  justify-content: center; /* Pusatkan secara vertikal */
+  text-align: center;
+}
+
+.card-services:hover {
+  transform: scale(1.04);
+}
+
+.artikel-services {
+  transform: translateY(20%); /* Dimulai dari bawah */
+  opacity: 0; /* Tidak terlihat */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  padding-left: 2rem;
+  text-align: start;
+}
+
+.card-services:hover .artikel-services {
+  transform: translateY(0); /* Muncul ke posisi aslinya */
+  opacity: 1;
+}
+
+.title-services {
+  text-align: start;
+  padding-left: 1.5rem;
+  padding-top: 4.2rem;
+}
+
+.svg-up {
+  display: none;
+}
+
+.wave-2 {
+  filter: drop-shadow(0px -15px 8px rgba(0, 0, 0, 0.5));
+  position: relative;
+  transform: rotate(180deg);
+  top: -2px;
+}
+
+.harga {
+  background: linear-gradient(220deg, #002153, #bce5ff),
+    url("image/jres5rig.png");
+  background-blend-mode: screen;
+  z-index: -5;
+}
+
+#contact {
+  padding-top: 100px;
+}
+
+
+.wave-3 {
+  filter: drop-shadow(0px -4px 15px rgba(0, 0, 0, 0.5));
+  z-index: 1;
+  position: sticky;
+}
+#footer {
+  z-index: 1;
+  position: relative;
+}
+
+.contact {
+  background-color: #fff;
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.harga-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.judul-harga {
+  text-align: center;
+  color: #ffff;
+  padding: 2rem;
+  text-shadow: 3px 3px rgb(0, 0, 0);
+  padding-top: 6rem;
+}
+
+.harga-box {
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.harga-box:hover {
+  transform: scale(1.08);
+  border: 1px solid rgba(0, 0, 0, 0.323);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.harga-content {
+  padding: .5rem;
+}
+
+.harga-content h3 {
+  margin-top: 1rem;
+}
+
+.harga-content p {
+  font-weight: 300;
+  font-size: smaller;
+}
+
+.harga-content img {
+  margin-left: 4rem;
+  padding: 1.5rem;
+}
+
+.form-kontak {
+  background: linear-gradient(150deg, rgba(255, 253, 253, 0), rgba(0, 0, 0, 0.404));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.social-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-container a {
+  text-decoration: none;
+  color: #00000089;
+}
+
+.social-container a:hover {
+  color: #000000c3;
+}
+
+.footer-content p {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 200px;
+}
+
+
+/* scroll smooth section */
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: .5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+
+
+
+
+/* Contoh penggunaan media queries untuk perangkat mobile */
+@media (max-width: 768px) {
+  /* Ubah tata letak atau padding/margin */
+  .waverow {
+    padding-top: 100px;
+  }
+
+  #wave {
+    bottom: 90px;
+  }
+
+  .services {
+    margin-top: 30px;
+    padding-top: 100px;
+  }
+
+  .svg-container {
+    display: grid;
+    justify-content: end;
+  }
+
+  .svg-up {
+    display: grid;
+    margin: 1.3rem;
+  }
+
+  .carousel {
+    gap: 0;
+  }
+
+  .card-services {
+    margin: 1rem;
+  }
+
+  /* Ubah ukuran font atau spasi */
+  .col-md-6 {
+    font-size: 14px;
+  }
+
+  text {
+    font-size: 35px;
+  }
+
+  .card-services {
+    width: 270px;
+  }
+
+  .title-services {
+    padding-top: 0;
+  }
+
+  .harga-box {
+    width: 250px;
+    height: 350px;
+    margin: 1.3rem;
+  }
+
+  .harga-content {
+    padding: .4rem;
+  }
+
+  .harga-content img {
+    margin-left: 3.8rem;
+    width: 120px;
+  }
+  
+  .harga-container {
+    display: grid;
+  }
+
+  .harga-content li {
+    font-size: small;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .section {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 26.5%;
+  }
+}

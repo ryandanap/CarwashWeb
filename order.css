@@ -1,0 +1,46 @@
+
+header {
+    padding-top: 90px;
+}
+
+.formcard {
+    background: linear-gradient(130deg, #ffffff, #0d6efd);
+    background-blend-mode: screen;
+}
+
+/* Reset global untuk menghilangkan margin dan padding bawaan */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer */
+.footer {
+    width: 100vw; /* Gunakan lebar penuh layar */
+    background-color: #007bff; /* Warna biru */
+    padding: 10px 0; /* Tambahkan padding atas dan bawah */
+    margin: 0; /* Pastikan tidak ada margin */
+    position: relative; /* Tetap di tempatnya */
+    overflow: hidden; /* Hilangkan overflow */
+}
+
+/* Container dalam footer */
+.container-footer {
+    max-width: 1200px; /* Membatasi konten di tengah */
+    margin: 0 auto; /* Membuat konten terpusat */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Link footer */
+.link-footer a {
+    margin: 0 10px; /* Jarak antar link */
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: white; /* Warna teks putih */
+}
+
+.text-footer {
+    font-size: 14px;
+}

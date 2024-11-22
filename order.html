@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panggil Sekarang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+
+    <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/yI_f3pxUssxaxb7bumz8FrttLFs7QPQglxa-45w7DN_TfIarYyPkWCJy9EUFYcNHQxE">
+
+    <!-- bootstrap offline -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg bg-primary border-body z-2" data-bs-theme="dark">
+        <div class="container-fluid">
+            <b class="navbar-brand fs-3 ms-3 text-white logo" href="#">Car<span class="text-black">Wash</span></b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-dark text-white" href="index.html">Beranda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="formcard">
+        <header class="justify-content-center d-grid">
+            <h1>Panggil Sekarang</h1>
+        </header>
+
+        <div class="container d-grid justify-content-center align items">
+            <form action="submit-contact" id="form_kontak" class="form_kontak px-4">
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Nomor Telepon:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="col mb-3">
+                        <label for="vehicle" class="form-label">Jenis Kendaraan:</label>
+                        <select id="vehicle" class="form-control" name="vehicle" required>
+                            <option value="motor">Mobil</option>
+                            <option value="mobil">Minibus/Bus</option>
+                            <option value="mobil">Pick-Up</option>
+                            <option value="mobil">Truk</option>
+                        </select>
+                    </div>
+                    <div class="col mb-3">
+                        <label for="service" class="form-label">Layanan:</label>
+                        <select id="service" class="form-control" name="service" required>
+                            <option value="cuci">Cuci Eksterior</option>
+                            <option value="detailing">Cuci Eksterior+Interior</option>
+                            <option value="poles">Polishing+Waxing</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Lokasi:</label>
+                        <input type="text" class="form-control" id="location" name="location" placeholder="koordinat lokasi : (-8.546631, 115.4396)" required>
+
+                        <!-- Tombol untuk membuka Google Maps -->
+                        <div class="mt-3">
+                            <a>Pilih lokasi anda di sini!</a>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d286.02519346378574!2d115.43952232265063!3d-8.54654359568831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1732260874736!5m2!1sid!2sid" 
+                                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" height="150" width="100%">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <p class="contact__message" id="contact-message"></p>
+
+                    <div class="d-flex gap-3">
+                        <button type="submit" name="submit" class="btn btn-success">Submit</button>
+                        <button type="button" onclick="resetForm()" class="btn btn-danger">Batal</button>
+                    </div>
+                </div>
+            </form>
+            <footer class="footer bg-primary mt-5">
+                <div class="container-footer">
+                    <div class="link-footer d-flex gap-3 justify-content-center">
+                        <a href="index.html" class="text-footer text-white text-decoration-none m-2 fs-6">Beranda</a>
+                    </div>
+                    <div class="text-center m-1 text-white">
+                        <i>&copy; 2024 Car Wash. All rights reserved.</i>
+                    </div>
+                </div>
+            </footer>
+
+    <!-- email js script code -->
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+
+    <script src="script.js"></script>
+
+    <!-- bootstrap offline -->
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Ganti YOUR_API_KEY dengan kunci API Google Maps Anda -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpN2BQSn80NMUqVTZgzZZxbdottdgAnuA&callback=initMap"></script>
+</body>
+
+</html>
